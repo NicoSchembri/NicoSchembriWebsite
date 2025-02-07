@@ -43,3 +43,8 @@ p {
     font-size: 18px;
     line-height: 1.6;
 }
+
+.custom-style {
+    width: 50%;
+    border-radius: 10px;
+  }
