@@ -3,7 +3,7 @@
 <head>
     <title>Nico's Website</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -33,9 +33,25 @@
         nav {
             display: flex;
             align-items: center; /* Align the logo and links vertically */
-            padding: 10px; /* Add some padding to the nav */
-            background-color: #f8f8f8; /* Optional: Add a background color */
-            border-bottom: 1px solid #ddd; /* Optional: Add a border */
+        }
+
+        .profile-photo-container {
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            z-index: 1000; /* Ensures the photo stays on top of other elements */
+        }
+
+        .profile-photo {
+            height: 250px; /* Adjust the size as needed */
+            width: 250px; /* Make it square or adjust as needed */
+            border-radius: 400%; /* Makes it circular */
+            border: 2px solid #000; /* Optional: Add a border */
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 100px; /* Add margin to prevent content from being hidden behind the fixed photo */
         }
     </style>
 </head>
