@@ -5,11 +5,13 @@ body {
     background: #e0e0e0; /* Lighter gray background */
     color: black;
     text-align: center;
+    min-width: 1200px; /* Prevent content from collapsing on mobile */
+    overflow-x: auto; /* Enable horizontal scrolling on mobile */
 }
 
 nav {
     background: #d3d3d3; /* Lighter gray for the nav bar */
-    padding: 20px;
+    padding: 20px 200px; /* Adjusted padding to match desktop layout */
     position: fixed;
     top: 0; /* Keeps the nav bar at the top */
     width: 100%;
@@ -17,6 +19,9 @@ nav {
     justify-content: space-evenly; /* Evenly spreads out links */
     z-index: 1000;
     font-size: 22px; /* Bigger font size */
+    left: 0; /* Ensure nav stays aligned */
+    right: 0; /* Ensure nav stays aligned */
+    box-sizing: border-box; /* Proper width calculations */
 }
 
 nav a {
@@ -49,4 +54,18 @@ p {
 iframe {
     display: block;
     margin: 20px auto;
+}
+
+.profile-photo-container {
+    position: fixed;
+    top: 200px;
+    left: 170px; /* Positioned to the left */
+    z-index: 1000; /* Ensures the photo stays on top of other elements */
+}
+
+.profile-photo {
+    height: 250px; /* Adjust the size as needed */
+    width: 250px; /* Make it square or adjust as needed */
+    border-radius: 400%; /* Makes it circular */
+    border: 2px solid #000; /* Optional: Add a border */
 }
