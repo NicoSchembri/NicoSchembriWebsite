@@ -1,43 +1,48 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ysabeau SC', sans-serif;
     margin: 0;
     padding: 0;
-    background: #2c2c2c;
-    color: #f4f4f4;
+    background: #e0e0e0; /* Lighter gray background */
+    color: black;
     text-align: center;
 }
+
 nav {
-    background: #1f1f1f;
-    padding: 15px;
+    background: #d3d3d3; /* Lighter gray for the nav bar */
+    padding: 20px;
     position: fixed;
-    top: 0;
+    top: 0; /* Keeps the nav bar at the top */
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-evenly; /* Evenly spreads out links */
     z-index: 1000;
+    font-size: 22px; /* Bigger font size */
 }
+
 nav a {
     text-decoration: none;
-    color: #f4f4f4;
+    color: black;
     font-weight: bold;
-    font-size: 18px;
 }
+
 nav a:hover {
-    color: #ffcc00;
+    color: #ff6600; /* Slightly different hover effect */
 }
+
 main {
     padding: 20px;
-    margin: 80px auto 40px;
+    margin: 100px auto 40px; /* Pushes content down so it doesn’t overlap the nav */
     width: 80%;
     max-width: 800px;
 }
+
 h1 {
-    font-size: 36px;
+    font-size: 40px; /* Makes the heading larger */
     margin-bottom: 10px;
 }
+
 p {
-    font-size: 18px;
+    font-size: 20px; /* Increases paragraph font size */
     line-height: 1.6;
 }
 

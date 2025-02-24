@@ -10,10 +10,35 @@
         body {
             font-family: 'Ysabeau SC', sans-serif;
         }
+
+        .logo {
+            height: 50px; /* Adjust the height as needed */
+            margin-right: 10px; /* Space between the logo and the nav links */
+        }
+
+        nav {
+            display: flex;
+            align-items: center; /* Align the logo and links vertically */
+        }
+
+        .project {
+            margin-bottom: 30px; /* Add space between projects */
+        }
+
+        .project img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto;
+        }
+
+        /* Larger font size for Snake Game Client Development bullet points */
+        .snake-client li {
+            font-size: 1.2em; /* Adjust the size as needed */
+        }
     </style>
 </head>
 <body>
     <nav>
+        <img src="wicked-nightmare.regular.png" alt="Logo" class="logo">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
@@ -22,11 +47,66 @@
     
     <main>
         <h1>Projects</h1>
-        <p>Here are some of the projects I'm working on:</p>
-        <ul>
-            <li><strong>Game project</strong> - One of my projects that I am working on is slowly working out the start to my game development with a 2D platformer that I am making with my buddies. This should update as the game is in production, but here is some art for the game that I have made so far.</li>
-        </ul>
-        <img src="cowboyGame.png" alt="Video game photo" style="width:600px;height:325px;">
+        <p>Here are some of the projects I'm working on or completed:</p>
+
+        <!-- Asynchronous Networking Library & Chat Application -->
+        <div class="project">
+            <h2>Asynchronous Networking Library & Chat Application</h2>
+            <p><strong>University of Utah - Kahlert School of Computing</strong></p>
+            <p><em>Fall 2024</em></p>
+            <ul>
+                <li>Designed and implemented a general-purpose asynchronous networking library in C# to support text-based communication, enabling seamless client-server interactions for a chat application and future game projects.</li>
+                <li>Developed a multi-threaded chat server capable of handling multiple clients concurrently, broadcasting messages to all connected users, and dynamically assigning usernames to clients upon connection.</li>
+                <li>Ensured thread safety and race condition prevention by implementing proper synchronization techniques in the server and networking library.</li>
+                <li>Integrated logging functionality to monitor and debug server and client activities, ensuring proper error handling and system traceability.</li>
+                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile practices to deliver the project iteratively.</li>
+                <li>Utilized TcpClient/TcpListener APIs to build a robust networking infrastructure, abstracting low-level details for ease of use in higher-level applications.</li>
+            </ul>
+            <p><strong>Technologies Used:</strong> C#, .NET, TcpClient/TcpListener, Multi-threading, Concurrency, Logging, GitHub</p>
+        </div>
+
+        <!-- Spreadsheet Application with GUI -->
+        <div class="project">
+            <h2>Spreadsheet Application with GUI</h2>
+            <p><strong>University of Utah - Kahlert School of Computing</strong></p>
+            <p><em>Fall 2024</em></p>
+            <ul>
+                <li>Designed and implemented a fully functional spreadsheet application with a Blazor-based GUI, enabling users to input data, formulas, and perform calculations in real-time.</li>
+                <li>Integrated the Model-View-Controller (MVC) architecture to separate the spreadsheet logic (Model) from the GUI (View) and user interactions (Controller), ensuring maintainability and scalability.</li>
+                <li>Developed features such as cell selection, formula evaluation, and dynamic updates for dependent cells, ensuring accurate and efficient spreadsheet functionality.</li>
+                <li>Implemented file I/O operations to save and load spreadsheets in JSON format, including error handling for invalid file inputs.</li>
+                <li>Added advanced features such as keyboard navigation, cell highlighting for formula dependencies, and a warning system for unsaved changes, enhancing user experience.</li>
+                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile practices to deliver the project iteratively.</li>
+                <li>Conducted code reviews and documented design decisions, challenges, and time tracking in the project README.</li>
+            </ul>
+            <p><strong>Technologies Used:</strong> Blazor, C#, .NET, MVC Architecture, JSON, GitHub, Pair Programming</p>
+        </div>
+
+        <!-- Snake Game Client Development -->
+        <div class="project snake-client">
+            <h2>Snake Game Client Development</h2>
+            <p><strong>University of Utah - Kahlert School of Computing</strong></p>
+            <p><em>Fall 2024</em></p>
+            <ul>
+                <li>Developed a Blazor-based GUI client for a networked Snake game, enabling real-time interaction with a server to display game state and send player commands.</li>
+                <li>Implemented client-server communication using a custom protocol, including JSON serialization/deserialization for game objects (snakes, walls, power-ups).</li>
+                <li>Designed and structured the application using MVC architecture, ensuring separation of concerns and maintainability.</li>
+                <li>Utilized multi-threading and concurrency to handle real-time updates and user inputs while avoiding race conditions.</li>
+                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile practices to deliver the project iteratively.</li>
+                <li>Enhanced user experience by creating a visually appealing GUI with custom graphics, animations, and a heads-up display (HUD) for player stats.</li>
+                <li>Debugged and optimized the client to maintain a consistent frame rate of 50+ FPS while handling server updates.</li>
+            </ul>
+            <p><strong>Technologies Used:</strong> Blazor, C#, .NET 8, JSON, MVC Architecture, GitHub, Multi-threading, Concurrency</p>
+        </div>
+
+        <!-- Game Project -->
+        <div class="project">
+            <h2>Game Project</h2>
+            <ul>
+                <li>One of my projects that I am working on is slowly working out the start to my game development with a 2D platformer that I am making with my buddies. This should update as the game is in production, but here is some art for the game that I have made so far.</li>
+            </ul>
+            <img src="cowboyGame.png" alt="Video game photo" style="width:600px;height:325px;">
+        </div>
     </main>
 </body>
 </html>
