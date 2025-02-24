@@ -9,6 +9,7 @@
     <style>
         body {
             font-family: 'Ysabeau SC', sans-serif;
+            margin: 0; /* Remove default body margin */
         }
         .custom-style {
             width: 50%;
@@ -32,18 +33,46 @@
         nav {
             display: flex;
             align-items: center; /* Align the logo and links vertically */
+            padding: 10px; /* Add some padding to the nav */
+            background-color: #f8f8f8; /* Optional: Add a background color */
+            border-bottom: 1px solid #ddd; /* Optional: Add a border */
+        }
+
+        .profile-photo-container {
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            z-index: 1000; /* Ensures the photo stays on top of other elements */
+        }
+
+        .profile-photo {
+            height: 250px; /* Adjust the size as needed */
+            width: 250px; /* Make it square or adjust as needed */
+            border-radius: 400%; /* Makes it circular */
+            border: 2px solid #000; /* Optional: Add a border */
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 100px; /* Add margin to prevent content from being hidden behind the fixed photo */
         }
     </style>
 </head>
 <body>
+    <!-- Profile Photo in Top-Left Corner -->
+    <div class="profile-photo-container">
+        <img src="headshot.png" alt="Headshot Photo" class="profile-photo">
+    </div>
+
+    <!-- Navigation Bar -->
     <nav>
         <img src="wicked-nightmare.regular.png" alt="Logo" class="logo">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="personalStuff.html">Non-School Stuff</a>
     </nav>
     
+    <!-- Main Content -->
     <main>
         <h1>Whats up dawgs! Welcome to my portfolio.</h1>
         <h2>About Me</h2>
