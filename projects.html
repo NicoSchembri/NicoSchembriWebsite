@@ -10,26 +10,32 @@
         body {
             font-family: 'Ysabeau SC', sans-serif;
         }
-
+    
+        /* Ensure all text elements use the same font and weight */
+        h1, h2, p, ul, li, strong, a, em {
+            font-family: 'Ysabeau SC', sans-serif;
+            font-weight: normal; /* Ensures text is not bold */
+        }
+    
         .logo {
             height: 50px; /* Adjust the height as needed */
             margin-right: 10px; /* Space between the logo and the nav links */
         }
-
+    
         nav {
             display: flex;
             align-items: center; /* Align the logo and links vertically */
         }
-
+    
         .project {
             margin-bottom: 30px; /* Add space between projects */
         }
-
+    
         .project img {
             max-width: 100%; /* Ensure images are responsive */
             height: auto;
         }
-
+    
         /* Larger font size for Snake Game Client Development bullet points */
         .snake-client li {
             font-size: 1.2em; /* Adjust the size as needed */
