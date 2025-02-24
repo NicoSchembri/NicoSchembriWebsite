@@ -33,6 +33,14 @@
         nav {
             display: flex;
             align-items: center; /* Align the logo and links vertically */
+            padding: 10px; /* Add some padding for better spacing */
+            background-color: #f8f8f8; /* Optional: Add a background color */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+        }
+
+        nav a {
+            margin: 0 10px; /* Space between the links */
+            font-size: 18px; /* Default font size for links */
         }
 
         .profile-photo-container {
@@ -52,6 +60,31 @@
         main {
             padding: 20px;
             margin-top: 100px; /* Add margin to prevent content from being hidden behind the fixed photo */
+        }
+
+        /* Hide the profile photo on mobile devices */
+        @media only screen and (max-width: 767px) {
+            .profile-photo-container {
+                display: none; /* Hide the photo container */
+            }
+
+            /* Adjust the navigation bar for mobile */
+            nav {
+                flex-direction: column; /* Stack logo and links vertically */
+                align-items: flex-start; /* Align items to the left */
+                padding: 5px 20px; /* Adjust padding */
+            }
+
+            .logo {
+                height: 30px; /* Adjust the logo size for mobile */
+                margin-bottom: 10px; /* Add space below the logo */
+                margin-top: 10px; /* Push the logo down */
+            }
+
+            nav a {
+                margin: 5px 0; /* Reduce space between links */
+                font-size: 16px; /* Smaller font size for mobile */
+            }
         }
     </style>
 </head>
