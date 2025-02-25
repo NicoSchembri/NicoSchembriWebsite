@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Nico's Website</title>
+    <title>Not School Related</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet">
@@ -9,54 +9,48 @@
         body {
             font-family: 'Ysabeau SC', sans-serif;
             margin: 0;
-            position: relative; /* Needed for absolute positioning context */
+            position: relative;
         }
 
-        /* Profile Photo Container */
-        .profile-photo-container {
-            position: absolute;
-            top: 25%; /* Adjusted to move the photo down */
-            left: 8%; /* Adjusted to move the photo to the left */
-            z-index: 1000;
-        }
-
-        .profile-photo {
-            height: 15vw; /* Responsive size based on viewport width */
-            width: 15vw;
-            min-height: 150px; /* Minimum size */
-            min-width: 150px;
-            border-radius: 50%;
-            border: 2px solid #000;
-            object-fit: cover; /* Ensure image doesn't stretch */
-        }
-
-        /* Navigation Bar */
+        /* Navigation Bar - Improved Scaling */
         nav {
             display: flex;
-            justify-content: space-between; /* Ensures the links are evenly distributed */
-            align-items: center; /* Vertically centers the items */
-            padding: 10px;
+            align-items: center;
+            padding: 1rem 2rem;
             background-color: #f8f8f8;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            gap: 2rem; /* Space between logo and links */
         }
 
         .logo {
-            height: 50px;
-            margin-right: 10px;
+            height: auto;
+            max-height: 4rem;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
         }
 
         nav a {
-            flex: 1; /* Each link takes up equal space */
-            text-align: center; /* Centers the text within each link */
-            font-size: 18px;
-            margin: 0 5px; /* Adds a small gap between links */
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            padding: 0.5rem 1rem;
+            white-space: nowrap;
+            transition: transform 0.2s ease;
+        }
+
+        nav a:hover {
+            transform: scale(1.05);
         }
 
         /* Main Content */
         main {
-            padding: 20px;
-            margin-left: 20%; /* Prevents text overlap with photo */
-            margin-top: 50px; /* Reduced from original since photo is now in flow */
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            position: relative;
         }
 
         a {
@@ -64,65 +58,75 @@
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        /* Image styling */
+        main img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
         }
 
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            /* Stack elements vertically on smaller screens */
-            .profile-photo-container {
-                position: relative;
-                top: auto;
-                left: auto;
-                text-align: center;
-                margin: 20px 0;
-            }
-
-            .profile-photo {
-                height: 200px;
-                width: 200px;
-            }
-
-            main {
-                margin-left: 20px;
-                margin-top: 20px;
-            }
-
-            /* Adjust navigation for mobile */
             nav {
-                flex-direction: column; /* Stack items vertically */
-                align-items: flex-start; /* Align items to the left */
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .logo {
+                max-height: 3rem;
+            }
+
+            .nav-links {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
             }
 
             nav a {
-                text-align: left; /* Align text to the left */
-                margin: 5px 0; /* Add spacing between stacked links */
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                white-space: normal;
+                text-align: center;
+                width: 100%;
+            }
+
+            main {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                font-size: 1rem;
+            }
+
+            main img {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Profile Photo -->
-    <div class="profile-photo-container">
-        <img src="headshot.png" alt="Nico's professional headshot" class="profile-photo">
-    </div>
-
     <!-- Navigation Bar -->
     <nav>
         <img src="wicked-nightmare.regular.png" alt="Website logo" class="logo">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="personalStuff.html">Not School Related</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="personalStuff.html">Not School Related</a>
+        </div>
     </nav>
     
     <!-- Main Content -->
     <main>
-        <h1>Whats up dawgs! Welcome to my portfolio.</h1>
-        <h2>About Me</h2>
-        <p>Hi, I'm Nico. I am currently a junior at the University of Utah, pursuing a bachelor's degree in Computer Science with an emphasis in game development.</p>
-        <p>I plan to update this website with some of the projects I've been working on, whether they’re coding-related, game-related, or just cool stuff I’m doing.</p>
-        <p>If you're interested in checking out my work, feel free to visit my <a href="https://github.com/NicoSchembri">GitHub</a> and <a href="https://instagram.com/nicoschembri">Instagram</a>.</p>
-        <p><a href="projects.html">Check out my latest projects!</a></p>
+        <h1>Stuff that I am doing outside of my computer.</h1>
+        <p>Outside of programming and game development, I am involved in the University of Utah Climb Team.</p>
+        <p>I compete, train and go on trips through my university. The University of Utah Climb Team is ranked the strongest climbing team for the past 3 years.</p>
+        <img src="thebigguy.png" alt="Rock climbing photo" style="width: 75%; max-width: 800px;">
     </main>
 </body>
 </html>
