@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Projects</title>
     <meta charset="UTF-8">
@@ -19,7 +20,8 @@
             padding: 1rem 2rem;
             background-color: #f8f8f8;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            gap: 2rem; /* Space between logo and links */
+            gap: 2rem;
+            /* Space between logo and links */
         }
 
         .logo {
@@ -143,6 +145,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav>
@@ -153,11 +156,59 @@
             <a href="personalStuff.html">Not School Related</a>
         </div>
     </nav>
-    
+
     <!-- Main Content -->
     <main>
         <h1>Projects</h1>
         <p>Here are some of the projects I'm working on or completed:</p>
+
+        <!-- Sprite Editor Implementation -->
+        <div class="project">
+            <h2>Sprite Editor Implementation & Team Collaboration</h2>
+            <p><strong>University of Utah - Kahlert School of Computing</strong></p>
+            <p><em>Spring 2025</em></p>
+            <ul>
+                <li>Developed a Qt-based sprite editor with core pixel art functionality including drawing tools, layer
+                    management, and color palettes using C++.</li>
+                <li>Implemented opacity controls with linear interpolation for smooth transitions and pixel-skipping
+                    behavior at lower opacity values.</li>
+                <li>Created onion skinning functionality to display semi-transparent previous/next frames as reference
+                    for animation work.</li>
+                <li>Designed an auto-save system with configurable intervals and crash recovery capabilities.</li>
+                <li>Developed polygon fill tool that automatically detects closed shapes and fills the interior when
+                    drawing returns to starting point.</li>
+                <li>Built dynamic canvas resizing tool with anchor point selection and content-aware scaling options.
+                </li>
+                <li>Implemented layer visibility toggles with keyboard shortcuts for rapid workflow switching.</li>
+                <li>Created custom .ssp file format with JSON serialization/deserialization for efficient sprite
+                    storage.</li>
+                <li>Designed and enforced team coding standards through comprehensive style guide documentation.</li>
+                <li>Optimized rendering performance to maintain 60 FPS during complex editing operations.</li>
+            </ul>
+            <p><strong>Technologies Used:</strong> Qt Framework, C++17, GitHub Actions, JSON, MVC Architecture,
+                Multi-threading</p>
+        </div>
+        
+        <!-- Simon Game Qt Application -->
+        <div class="project">
+            <h2>Simon Memory Game – Built with Qt Framework</h2>
+            <p><strong>University of Utah – Kahlert School of Computing</strong></p>
+            <p><em>Spring 2025</em></p>
+        
+            <ul>
+                <li>Developed an interactive two-button Simon memory game using the Qt framework, emphasizing a clean Model-View separation via Qt's signals and slots.</li>
+                <li>Engineered a robust game logic class by inheriting from <code>QObject</code>, handling sequence generation, input validation, and increasing difficulty.</li>
+                <li>Designed responsive UI animations for seamless button flashing, incorporating progressive speed increases.</li>
+                <li>Applied Qt StyleSheets to dynamically reflect button states (idle, pressed, flashing) and overall game status, enhancing user experience.</li>
+                <li>Integrated a smooth, animated progress bar that updates in real time as the player inputs the sequence.</li>
+                <li>Built a comprehensive game state system: UI controls disable during computer turns and "Game Over" states are clearly indicated visually.</li>
+                <li>Used Qt Designer for UI layout, maintaining a clean separation between UI code and custom application logic.</li>
+            </ul>
+            <p><strong>Technologies:</strong> Qt 6, C++17, Signals & Slots, QTimer, Model-View Architecture, GitHub Collaboration</p>
+        
+            <p><strong>Architecture Overview:</strong> Strict separation between the Model (game logic) and the View (UI). Communication is handled solely through Qt signals and slots. The Model generates and validates the sequence, while the View displays visuals and collects input — never manipulating the game state directly.</p>
+        </div>
+        
 
         <!-- Asynchronous Networking Library & Chat Application -->
         <div class="project">
@@ -165,14 +216,23 @@
             <p><strong>University of Utah - Kahlert School of Computing</strong></p>
             <p><em>Fall 2024</em></p>
             <ul>
-                <li>Designed and implemented a general-purpose asynchronous networking library in C# to support text-based communication, enabling seamless client-server interactions for a chat application and future game projects.</li>
-                <li>Developed a multi-threaded chat server capable of handling multiple clients concurrently, broadcasting messages to all connected users, and dynamically assigning usernames to clients upon connection.</li>
-                <li>Ensured thread safety and race condition prevention by implementing proper synchronization techniques in the server and networking library.</li>
-                <li>Integrated logging functionality to monitor and debug server and client activities, ensuring proper error handling and system traceability.</li>
-                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile practices to deliver the project iteratively.</li>
-                <li>Utilized TcpClient/TcpListener APIs to build a robust networking infrastructure, abstracting low-level details for ease of use in higher-level applications.</li>
+                <li>Designed and implemented a general-purpose asynchronous networking library in C# to support
+                    text-based communication, enabling seamless client-server interactions for a chat application and
+                    future game projects.</li>
+                <li>Developed a multi-threaded chat server capable of handling multiple clients concurrently,
+                    broadcasting messages to all connected users, and dynamically assigning usernames to clients upon
+                    connection.</li>
+                <li>Ensured thread safety and race condition prevention by implementing proper synchronization
+                    techniques in the server and networking library.</li>
+                <li>Integrated logging functionality to monitor and debug server and client activities, ensuring proper
+                    error handling and system traceability.</li>
+                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile
+                    practices to deliver the project iteratively.</li>
+                <li>Utilized TcpClient/TcpListener APIs to build a robust networking infrastructure, abstracting
+                    low-level details for ease of use in higher-level applications.</li>
             </ul>
-            <p><strong>Technologies Used:</strong> C#, .NET, TcpClient/TcpListener, Multi-threading, Concurrency, Logging, GitHub</p>
+            <p><strong>Technologies Used:</strong> C#, .NET, TcpClient/TcpListener, Multi-threading, Concurrency,
+                Logging, GitHub</p>
         </div>
 
         <!-- Spreadsheet Application with GUI -->
@@ -181,15 +241,24 @@
             <p><strong>University of Utah - Kahlert School of Computing</strong></p>
             <p><em>Fall 2024</em></p>
             <ul>
-                <li>Designed and implemented a fully functional spreadsheet application with a Blazor-based GUI, enabling users to input data, formulas, and perform calculations in real-time.</li>
-                <li>Integrated the Model-View-Controller (MVC) architecture to separate the spreadsheet logic (Model) from the GUI (View) and user interactions (Controller), ensuring maintainability and scalability.</li>
-                <li>Developed features such as cell selection, formula evaluation, and dynamic updates for dependent cells, ensuring accurate and efficient spreadsheet functionality.</li>
-                <li>Implemented file I/O operations to save and load spreadsheets in JSON format, including error handling for invalid file inputs.</li>
-                <li>Added advanced features such as keyboard navigation, cell highlighting for formula dependencies, and a warning system for unsaved changes, enhancing user experience.</li>
-                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile practices to deliver the project iteratively.</li>
-                <li>Conducted code reviews and documented design decisions, challenges, and time tracking in the project README.</li>
+                <li>Designed and implemented a fully functional spreadsheet application with a Blazor-based GUI,
+                    enabling users to input data, formulas, and perform calculations in real-time.</li>
+                <li>Integrated the Model-View-Controller (MVC) architecture to separate the spreadsheet logic (Model)
+                    from the GUI (View) and user interactions (Controller), ensuring maintainability and scalability.
+                </li>
+                <li>Developed features such as cell selection, formula evaluation, and dynamic updates for dependent
+                    cells, ensuring accurate and efficient spreadsheet functionality.</li>
+                <li>Implemented file I/O operations to save and load spreadsheets in JSON format, including error
+                    handling for invalid file inputs.</li>
+                <li>Added advanced features such as keyboard navigation, cell highlighting for formula dependencies, and
+                    a warning system for unsaved changes, enhancing user experience.</li>
+                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile
+                    practices to deliver the project iteratively.</li>
+                <li>Conducted code reviews and documented design decisions, challenges, and time tracking in the project
+                    README.</li>
             </ul>
-            <p><strong>Technologies Used:</strong> Blazor, C#, .NET, MVC Architecture, JSON, GitHub, Pair Programming</p>
+            <p><strong>Technologies Used:</strong> Blazor, C#, .NET, MVC Architecture, JSON, GitHub, Pair Programming
+            </p>
         </div>
 
         <!-- Snake Game Client Development -->
@@ -198,15 +267,23 @@
             <p><strong>University of Utah - Kahlert School of Computing</strong></p>
             <p><em>Fall 2024</em></p>
             <ul>
-                <li>Developed a Blazor-based GUI client for a networked Snake game, enabling real-time interaction with a server to display game state and send player commands.</li>
-                <li>Implemented client-server communication using a custom protocol, including JSON serialization/deserialization for game objects (snakes, walls, power-ups).</li>
-                <li>Designed and structured the application using MVC architecture, ensuring separation of concerns and maintainability.</li>
-                <li>Utilized multi-threading and concurrency to handle real-time updates and user inputs while avoiding race conditions.</li>
-                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile practices to deliver the project iteratively.</li>
-                <li>Enhanced user experience by creating a visually appealing GUI with custom graphics, animations, and a heads-up display (HUD) for player stats.</li>
-                <li>Debugged and optimized the client to maintain a consistent frame rate of 50+ FPS while handling server updates.</li>
+                <li>Developed a Blazor-based GUI client for a networked Snake game, enabling real-time interaction with
+                    a server to display game state and send player commands.</li>
+                <li>Implemented client-server communication using a custom protocol, including JSON
+                    serialization/deserialization for game objects (snakes, walls, power-ups).</li>
+                <li>Designed and structured the application using MVC architecture, ensuring separation of concerns and
+                    maintainability.</li>
+                <li>Utilized multi-threading and concurrency to handle real-time updates and user inputs while avoiding
+                    race conditions.</li>
+                <li>Collaborated with a partner using pair programming and GitHub for version control, following Agile
+                    practices to deliver the project iteratively.</li>
+                <li>Enhanced user experience by creating a visually appealing GUI with custom graphics, animations, and
+                    a heads-up display (HUD) for player stats.</li>
+                <li>Debugged and optimized the client to maintain a consistent frame rate of 50+ FPS while handling
+                    server updates.</li>
             </ul>
-            <p><strong>Technologies Used:</strong> Blazor, C#, .NET 8, JSON, MVC Architecture, GitHub, Multi-threading, Concurrency</p>
+            <p><strong>Technologies Used:</strong> Blazor, C#, .NET 8, JSON, MVC Architecture, GitHub, Multi-threading,
+                Concurrency</p>
         </div>
 
         <!-- Halo Energy Sword 3D Model -->
@@ -215,12 +292,18 @@
             <p><strong>Digital Arts Class</strong></p>
             <p><em>Fall 2024</em></p>
             <ul>
-                <li>Designed and modeled the iconic Energy Sword from the <em>Halo</em> franchise using Autodesk Maya, focusing on accuracy and attention to detail.</li>
-                <li>Created the sword's hilt and energy blades using polygonal modeling techniques, ensuring clean topology and proper scaling.</li>
-                <li>Applied materials and textures to replicate the metallic finish of the hilt and the glowing, translucent effect of the energy blades.</li>
-                <li>Utilized emissive materials and strategic lighting to enhance the futuristic glow of the sword, rendering the final model with Arnold for a polished look.</li>
-                <li>Overcame challenges in balancing realism with the game's stylized aesthetic, particularly in achieving the glowing energy effect for the blades.</li>
-                <li>Demonstrated creativity and technical skill by translating a 2D game asset into a fully realized 3D model.</li>
+                <li>Designed and modeled the iconic Energy Sword from the <em>Halo</em> franchise using Autodesk Maya,
+                    focusing on accuracy and attention to detail.</li>
+                <li>Created the sword's hilt and energy blades using polygonal modeling techniques, ensuring clean
+                    topology and proper scaling.</li>
+                <li>Applied materials and textures to replicate the metallic finish of the hilt and the glowing,
+                    translucent effect of the energy blades.</li>
+                <li>Utilized emissive materials and strategic lighting to enhance the futuristic glow of the sword,
+                    rendering the final model with Arnold for a polished look.</li>
+                <li>Overcame challenges in balancing realism with the game's stylized aesthetic, particularly in
+                    achieving the glowing energy effect for the blades.</li>
+                <li>Demonstrated creativity and technical skill by translating a 2D game asset into a fully realized 3D
+                    model.</li>
             </ul>
             <p><strong>Technologies Used:</strong> Autodesk Maya, Arnold Renderer, 3D Modeling, Texturing, Lighting</p>
         </div>
@@ -229,10 +312,13 @@
         <div class="project">
             <h2>Game Project</h2>
             <ul>
-                <li>One of my projects that I am working on is slowly working out the start to my game development with a 2D platformer that I am making with my buddies. This should update as the game is in production, but here is some art for the game that I have made so far.</li>
+                <li>One of my projects that I am working on is slowly working out the start to my game development with
+                    a 2D platformer that I am making with my buddies. This should update as the game is in production,
+                    but here is some art for the game that I have made so far.</li>
             </ul>
             <img src="cowboyGame.png" alt="Video game photo" style="width:100%; max-width:600px; height:auto;">
         </div>
     </main>
 </body>
+
 </html>
