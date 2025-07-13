@@ -76,6 +76,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 1.25rem;
+      color: black; /* so messages are visible on background */
     }
 
     .movieCard {
@@ -191,10 +192,20 @@
   </main>
 
   <script>
-    const jellyfinServerUrl = 'https://jellyfin.nicoschembri.com/';
+    const jellyfinServerUrl = 'https://jellyfin.nicoschembri.com/'; // Use your Cloudflare tunnel URL now
     const apiKey = '2293611e04fc443a9a45dd95c68472c4';
 
     const movieGrid = document.getElementById('movieGrid');
+
+    async function isJellyfinOnline() {
+      try {
+        // Use a lightweight endpoint; /health is a common one, adjust if needed
+        const response = await fetch(`${jellyfinServerUrl}system/info/public`, { method: 'GET' });
+        return response.ok;
+      } catch (err) {
+        return false;
+      }
+    }
 
     async function fetchUserId() {
       const response = await fetch(`${jellyfinServerUrl}Users`, {
@@ -250,7 +261,21 @@
       }
     }
 
-    fetchMovies();
+    async function loadMovies() {
+      movieGrid.innerHTML = 'Checking Jellyfin server status...';
+
+      const online = await isJellyfinOnline();
+      if (!online) {
+        movieGrid.innerHTML = '<p>Jellyfin server is currently offline. Please try again later.</p>';
+        return;
+      }
+
+      // If online, fetch movies normally
+      movieGrid.innerHTML = 'Loading movies...';
+      await fetchMovies();
+    }
+
+    loadMovies();
   </script>
 </body>
 </html>
