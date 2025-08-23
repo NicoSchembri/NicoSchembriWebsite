@@ -237,7 +237,7 @@
           const posterUrl = movie.ImageTags?.Primary
             ? `${jellyfinServerUrl}Items/${movie.Id}/Images/Primary?tag=${movie.ImageTags.Primary}&quality=90&X-Emby-Token=${apiKey}`
             : 'fallback-poster.png';
-          const movieStreamUrl = `${jellyfinServerUrl}web/index.html#!/details?id=${movie.Id}`;
+          const movieStreamUrl = `${jellyfinServerUrl}Videos/${movie.Id}/stream.mp4?container=mp4&videoCodec=h264&audioCodec=aac&X-Emby-Token=${apiKey}`;
 
           const card = document.createElement('a');
           card.className = 'movieCard';
@@ -279,4 +279,5 @@
   </script>
 </body>
 </html>
+
 
