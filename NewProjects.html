@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Rosarivo&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background-color: #121212;
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #ddd;
+    font-family: "Courier New", monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-container {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-link {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: clamp(28px, 3vw, 48px);
+    letter-spacing: 0.2vw;
+    color: #f8be2a;
+    text-decoration: none;
+    text-shadow: 0 0 0.5vw #0b3d91;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-link:hover {
+    animation: flashHighlight 0.08s infinite alternate;
+}
+
+@keyframes flashHighlight {
+    from {
+        color: #ffffff;
+        text-shadow: 0 0 10px #ffffff;
+    }
+    to {
+        color: #f8be2a;
+        text-shadow: 0 0 10px #ffffff;
+    }
+}
+
+.header {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: clamp(28px, 3vw, 48px);
+    letter-spacing: 0.2vw;
+    color: #ddd;
+    text-shadow: 0 0 0.5vw #0b3d91;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.project-box {
+    background-color: #1e1e1e;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-title {
+    font-family: 'Rosarivo', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: clamp(14px, 1.8vw, 18px);
+    flex-grow: 1;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 15px;
+    gap: 10px; 
+}
+
+.project-buttons a {
+    text-decoration: none;
+    flex: 1;
+}
+
+.project-buttons button {
+    width: 100%;
+    background-color: #0b3d91;
+    color: #fff;
+    border: none;
+    padding: 10px 16px; 
+    border-radius: 6px;
+    font-size: clamp(12px, 1.5vw, 16px);
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+@keyframes flicker {
+    from {
+        background-color: #0b3d91;
+        color: #fff;
+        box-shadow: 0 0 5px #0b3d91;
+    }
+    to {
+        background-color: #f8be2a;
+        color: #000;
+        box-shadow: 0 0 15px #f8be2a;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav-container">
+    <a href="homePage.html" class="nav-link">Home</a>
+    <a href="Introduction.html" class="nav-link">Introduction</a>
+    <a href="NewProjects.html" class="nav-link">Projects</a>
+    <a href="About.html" class="nav-link">About</a>
+    <a href="Contact.html" class="nav-link">Contact</a>
+</div>
+
+<div class="grid-container">
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+    <div class="project-box">
+        <div class="project-title">Project 1</div>
+        <ul class="project-description">
+            <li>Feature/point 1</li>
+            <li>Feature/point 2</li>
+            <li>Feature/point 3</li>
+            <li>Feature/point 4</li>
+        </ul>
+        <div class="project-buttons">
+            <a href="Project1.html"><button>View Project</button></a>
+            <a href="https://github.com/username/project1"><button>View on GitHub</button></a>
+        </div>
+    </div>
+
+</div>
+
+<audio id="hoverSound" src="LegoSounds1.mp3" preload="auto"></audio>
+<audio id="clickSound" src="LegoSounds2.mp3" preload="auto"></audio>
+
+<script>
+const hoverSound = document.getElementById("hoverSound");
+const clickSound = document.getElementById("clickSound");
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+    });
+
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const url = link.href;
+        clickSound.pause();
+        clickSound.currentTime = 0;
+        clickSound.play();
+        clickSound.onended = () => {
+            window.location.href = url;
+        };
+    });
+});
+
+const buttons = document.querySelectorAll(".project-buttons button");
+
+buttons.forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+    });
+
+    button.addEventListener("click", (e) => {
+        const link = button.closest("a");
+        if (link) {
+            e.preventDefault();
+            clickSound.pause();
+            clickSound.currentTime = 0;
+            clickSound.play();
+            clickSound.onended = () => {
+                window.location.href = link.href;
+            };
+        } else {
+            clickSound.pause();
+            clickSound.currentTime = 0;
+            clickSound.play();
+        }
+    });
+});
+</script>
+
+</body>
+</html>

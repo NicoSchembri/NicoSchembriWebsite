@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Nico Schembri</title>
+<!-- This is a cooler font but not sure if its the one -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    background-color:#121212;
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:6vh;
+}
+
+.site-header{
+    text-align:center;
+    width:fit-content;
+}
+
+.main-title{
+    font-family:"Rosarivo", serif;
+    font-size:clamp(48px,8vw,110px);
+    letter-spacing:0.08em;
+    color:#ddd;
+    white-space:nowrap;
+
+    text-shadow:
+        -4px -4px 0 #000,
+        4px -4px 0 #000,
+        -4px 4px 0 #000,
+        4px 4px 0 #000;
+}
+
+.sub-title{
+    font-family:"Courier New", monospace;
+    font-weight:bold;
+    font-size:clamp(28px,3vw,120px);
+    letter-spacing:0.18em;
+
+    color:#ddd;
+
+    border-top:3px solid #888;
+    border-bottom:3px solid #888;
+
+    width:100%;
+    padding:2px 0;
+    margin-top:10px;
+}
+
+.menu-container{
+    text-align:center;
+}
+
+.menu-option{
+    font-family:"Courier New", monospace;
+    font-weight:bold;
+    font-variant:small-caps;
+    font-size:clamp(28px,3vw,48px);
+    letter-spacing:0.2vw;
+    color:#f8be2a;
+    margin:1.5vh 0;
+    text-shadow:0 0 0.5vw #0b3d91;
+    cursor:pointer;
+}
+
+.menu-option:hover{
+    animation:flashHighlight 0.08s infinite alternate;
+}
+
+.menu-link {
+    text-decoration: none;
+}
+
+@keyframes flashHighlight{
+    from{
+        color:#ffffff;
+        text-shadow:0 0 10px #ffffff;
+    }
+    to{
+        color:#f8be2a;
+        text-shadow:0 0 10px #ffffff;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="site-header">
+    <div class="main-title">NICO SCHEMBRI</div>
+    <div class="sub-title">THE PERSONAL WEBSITE</div>
+</div>
+
+<div class="menu-container">
+    <a href="Introduction.html" class="menu-link"><div class="menu-option">Introduction</div></a>
+    <a href="NewProjects.html" class="menu-link"><div class="menu-option">Projects</div></a>
+    <div class="menu-option">About</div>
+    <div class="menu-option">Contact</div>
+</div>
+
+<audio id="hoverSound" src="LegoSounds1.mp3" preload="auto"></audio>
+<audio id="clickSound" src="LegoSounds2.mp3" preload="auto"></audio>
+
+<script>
+
+const hoverSound = document.getElementById("hoverSound");
+const clickSound = document.getElementById("clickSound");
+
+const menuItems = document.querySelectorAll(".menu-option");
+
+menuItems.forEach(item => {
+
+    item.addEventListener("mouseenter", () => {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+    });
+
+    item.addEventListener("click", (e) => {
+        const link = item.closest("a");
+        if (link) {
+            e.preventDefault();
+
+            clickSound.pause();
+            clickSound.currentTime = 0;
+            clickSound.play();
+
+            clickSound.onended = () => {
+                window.location.href = link.href;
+            };
+        } else {
+            clickSound.pause();
+            clickSound.currentTime = 0;
+            clickSound.play();
+        }
+    });
+
+});
+
+</script>
+
+</body>
+</html>

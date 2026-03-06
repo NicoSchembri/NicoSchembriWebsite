@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Introduction</title>
+<link href="https://fonts.googleapis.com/css2?family=Rosarivo&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background-color: #121212;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #ddd;
+    font-family: "Courier New", monospace;
+}
+
+.nav-container {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-link {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: clamp(28px, 3vw, 48px);
+    letter-spacing: 0.2vw;
+    color: #f8be2a;
+    text-decoration: none;
+    text-shadow: 0 0 0.5vw #0b3d91;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-link:hover {
+    animation: flashHighlight 0.08s infinite alternate;
+}
+
+@keyframes flashHighlight {
+    from {
+        color: #ffffff;
+        text-shadow: 0 0 10px #ffffff;
+    }
+    to {
+        color: #f8be2a;
+        text-shadow: 0 0 10px #ffffff;
+    }
+}
+
+.content {
+    text-align: left;            
+    font-size: clamp(32px, 5vw, 64px); 
+    font-family: 'Rosarivo', serif;   
+    max-width: 800px;          
+    width: 100%;
+    line-height: 1.2;
+    margin: 0 auto;             
+}
+
+.intro {
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-family: 'Rosarivo', serif;
+    line-height: 1.4;
+    color: #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav-container">
+    <a href="homePage.html" class="nav-link">Home</a>
+    <a href="Introduction.html" class="nav-link">Introduction</a>
+    <a href="NewProjects.html" class="nav-link">Projects</a>
+    <a href="About.html" class="nav-link">About</a>
+    <a href="Contact.html" class="nav-link">Contact</a>
+</div>
+
+<div class="content">
+    <p class="intro">Hi, I'm Nico</p>
+    <p class="description">
+        I am a computer science student at the University of Utah, pursuing a bachelor's degree with an emphasis in game development, 
+        currently in my fourth year with plans to graduate in December 2026. I have always been fascinated by the worlds that video games 
+        can create, and that fascination has led me to design and build experiences that allow people to escape, explore, and immerse themselves 
+        in new realities. Studying computer science has given me the tools to bring these ideas to life through game development, 
+        software development, and solving complex problems. 
+    </p>
+</div>
+
+<audio id="hoverSound" src="LegoSounds1.mp3" preload="auto"></audio>
+<audio id="clickSound" src="LegoSounds2.mp3" preload="auto"></audio>
+
+<script>
+const hoverSound = document.getElementById("hoverSound");
+const clickSound = document.getElementById("clickSound");
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+    });
+
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const url = link.href;
+
+        clickSound.pause();
+        clickSound.currentTime = 0;
+        clickSound.play();
+
+        clickSound.onended = () => {
+            window.location.href = url;
+        };
+    });
+});
+</script>
+
+</body>
+</html>
